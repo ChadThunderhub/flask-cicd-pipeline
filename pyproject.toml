@@ -1,0 +1,15 @@
+[project]
+name = "aheflask"
+authors = [{name = "Mateusz Zielinski", email = "drinzmz@gmail.com"}]
+version = "0.1.0"
+requires-python = ">=3.8"
+dependencies = [
+    "requests",
+    "Flask"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "coverage"
+]

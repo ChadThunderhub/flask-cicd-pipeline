@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <div class="row p-3 border rounded bg-light">
+    <div class="col-sm">
+      <h5 class="text-secondary">Local Time (Python):</h5>
+      <p class="fw-bold">{{local_time}}</p>
+    </div>
+    <div class="col-sm">
+      <h5 class="text-secondary">Server Time (UTC):</h5>
+      <p class="fw-bold text-success">{{server_time}}</p>
+      
+      <h5 class="text-secondary mt-3">JS Client Time:</h5>
+      <div id="client-time" class="fw-bold text-primary"></div> 
+    </div>
+  </div>
+
+  <script>
+    const serverTime = new Date("{{ server_time }}");
+    const localTime = new Date();
+    document.getElementById("client-time").innerHTML = localTime.toString();
+  </script>
+{% endblock %}

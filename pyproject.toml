@@ -1,6 +1,7 @@
 [project]
-name = "Tworzenie prostej aplikacji internetowej w Flask"
-authors = [{name = "Wiktor Pieprzowski", index = "156657"}]
+name = "webapp"
+description = "A simple Flask web application displaying credentials, powered by an automated CI/CD pipeline."
+authors = [{name = "Wiktor Pieprzowski", email = "zoltamordemuzrob@gmail.com"}]
 version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [

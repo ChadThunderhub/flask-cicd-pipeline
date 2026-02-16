@@ -2,7 +2,7 @@
 
 FIRST_NAME:str = "Wiktor"
 LAST_NAME:str = "Pieprzowski"
-INDEX:str = "156657"
+MAIL:str = "zoltamordemuzrob@gmail.com"
 
 
 def FirstName(name: str) -> str:
@@ -11,5 +11,5 @@ def FirstName(name: str) -> str:
 def LastName(lastName: str) -> str:
     return str(f"{lastName}")
 
-def Index(index: str) -> str:
-    return str(f"{index}")
+def Mail(mail: str) -> str:
+    return str(f"{mail}")

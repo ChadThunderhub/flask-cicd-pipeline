@@ -31,3 +31,8 @@ jobs:
       run: |
         echo "Checking Flask routes..."
         flask routes
+
+    - name: Build Docker Image (The Sigma Flex)
+      run: |
+        echo "Building Docker image..."
+        docker build -t webapp:latest .

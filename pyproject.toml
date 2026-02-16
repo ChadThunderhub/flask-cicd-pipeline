@@ -1,8 +1,8 @@
 [project]
-name = "aheflask"
-authors = [{name = "Mateusz Zielinski", email = "drinzmz@gmail.com"}]
+name = "Tworzenie prostej aplikacji internetowej w Flask"
+authors = [{name = "Wiktor Pieprzowski", index = "156657"}]
 version = "0.1.0"
-requires-python = ">=3.8"
+requires-python = ">=3.12"
 dependencies = [
     "requests",
     "Flask"

@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <div class="row bg-light">
+    <div class="col-sm">
+      <p>Local Time:</p>
+      {{local_time}}
+    </div>
+    <div class="col-sm">
+      <p>Server Time:</p>
+      {{server_time}}
+      <div id="clien-time"> </div>
+    </div>
+  </div>
+
+  <script>
+    const serverTime = new Date("{{ server_time }}");
+    const localTime = new Date();
+    document.getElementById("client-time").innerHTML = localTime;
+  </script>
+
+  
+{% endblock %}

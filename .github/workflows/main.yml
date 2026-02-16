@@ -27,7 +27,7 @@ jobs:
 
     - name: Run Application Health Check (Flask Routes)
       env:
-        FLASK_APP: aheflask/aheflask.py
+        FLASK_APP: webapp/app.py
       run: |
-        echo "Sprawdzam, czy apka wstaje i kompiluje routy bez błędu..."
+        echo "Checking Flask routes..."
         flask routes

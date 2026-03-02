@@ -25,14 +25,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install -e .[dev]
 
-    - name: Run Application Health Check (Flask Routes)
+    - name: Run Application Health Check
       env:
         FLASK_APP: webapp/app.py
       run: |
         echo "Checking Flask routes..."
         flask routes
 
-    - name: Build Docker Image (The Sigma Flex)
+    - name: Build Docker Image
       run: |
         echo "Building Docker image..."
         docker build -t webapp:latest .

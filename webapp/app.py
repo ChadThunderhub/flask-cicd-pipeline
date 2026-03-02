@@ -1,5 +1,3 @@
-# Tworzenie prostej aplikacji internetowej w Flask
-
 from flask import Flask, render_template
 import os
 

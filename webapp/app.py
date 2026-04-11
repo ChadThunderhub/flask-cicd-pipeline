@@ -12,9 +12,6 @@ if os.path.exists(IMAGE_FOLDER):
 else:
     CACHED_IMAGES = []
 
-# def home():
-#     return render_template('main.html', firstName=FirstName(FIRST_NAME), lastName=LastName(LAST_NAME), mail=Mail(MAIL))
-
 @app.route('/',  methods=['GET'])
 @app.route('/main',  methods=['GET'])
 def main():

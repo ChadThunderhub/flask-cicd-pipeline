@@ -4,4 +4,4 @@ COPY pyproject.toml ./
 COPY webapp/ ./webapp/
 RUN pip install --upgrade pip && pip install .
 EXPOSE 5000
-CMD ["flask", "--app", "webapp.app", "run", "--host=0.0.0.0"]
+CMD ["gunicorn", "--workers=4", "--bind=0.0.0.0:5000", "webapp.app:app"]

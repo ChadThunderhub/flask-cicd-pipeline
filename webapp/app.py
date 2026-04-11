@@ -1,19 +1,24 @@
 from flask import Flask, render_template
 import os
 
-from webapp.code import FirstName, LastName, Mail
 from webapp.code import FIRST_NAME, LAST_NAME, MAIL
 from datetime import datetime, timezone
 
 app = Flask(__name__)
 
-@app.route('/',  methods=['GET'])
-def home():
-    return render_template('main.html', firstName=FirstName(FIRST_NAME), lastName=LastName(LAST_NAME), mail=Mail(MAIL))
+IMAGE_FOLDER = os.path.join(app.root_path, 'static', 'images')
+if os.path.exists(IMAGE_FOLDER):
+    CACHED_IMAGES = [img for img in os.listdir(IMAGE_FOLDER) if img.endswith(('JPG', 'PNG', 'jpg', 'png'))]
+else:
+    CACHED_IMAGES = []
 
+# def home():
+#     return render_template('main.html', firstName=FirstName(FIRST_NAME), lastName=LastName(LAST_NAME), mail=Mail(MAIL))
+
+@app.route('/',  methods=['GET'])
 @app.route('/main',  methods=['GET'])
 def main():
-    return render_template('main.html', firstName=FirstName(FIRST_NAME), lastName=LastName(LAST_NAME), mail=Mail(MAIL))
+    return render_template('main.html', firstName=FIRST_NAME, lastName=LAST_NAME, mail=MAIL)
 
 @app.route('/time',  methods=['GET'])
 def time():
@@ -23,6 +28,4 @@ def time():
 
 @app.route('/gallery',  methods=['GET'])
 def gallery():
-    image_folder = os.path.join(app.root_path, 'static', 'images')
-    images = [img for img in os.listdir(image_folder) if img.endswith(('JPG', 'PNG'))]
-    return render_template('gallery.html', images = images)
+    return render_template('gallery.html', images=CACHED_IMAGES)

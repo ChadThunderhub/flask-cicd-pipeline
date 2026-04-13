@@ -30,7 +30,7 @@ Make sure you have [Docker](https://www.docker.com/) and Docker Compose installe
    git clone https://github.com/ChadThunderhub/flask-cicd-pipeline.git
    cd flask-cicd-pipeline
 
-2. Spin up the production environment using Docker Compose:
+2. Build and start the container in detached mode:
     docker-compose up --build -d
 
 3. Access the application at: http://localhost:5000

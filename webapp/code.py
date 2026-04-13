@@ -1,3 +1,3 @@
 FIRST_NAME:str = "Wiktor"
 LAST_NAME:str = "Pieprzowski"
-MAIL:str = "zoltamordemuzrob@gmail.com"
+LINKEDIN:str = "https://www.linkedin.com/in/wiktor-pieprzowski"

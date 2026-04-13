@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 import os
 
-from webapp.code import FIRST_NAME, LAST_NAME, MAIL
+from webapp.code import FIRST_NAME, LAST_NAME, LINKEDIN
 from datetime import datetime, timezone
 
 app = Flask(__name__)
@@ -15,7 +15,7 @@ else:
 @app.route('/',  methods=['GET'])
 @app.route('/main',  methods=['GET'])
 def main():
-    return render_template('main.html', firstName=FIRST_NAME, lastName=LAST_NAME, mail=MAIL)
+    return render_template('main.html', firstName=FIRST_NAME, lastName=LAST_NAME, linkedin=LINKEDIN)
 
 @app.route('/time',  methods=['GET'])
 def time():

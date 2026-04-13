@@ -27,7 +27,7 @@ Make sure you have [Docker](https://www.docker.com/) and Docker Compose installe
 ### Local Deployment
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/yourusername/flask-cicd-pipeline.git](https://github.com/yourusername/flask-cicd-pipeline.git)
+   git clone https://github.com/ChadThunderhub/flask-cicd-pipeline.git
    cd flask-cicd-pipeline
 
 2. Spin up the production environment using Docker Compose:

@@ -31,9 +31,13 @@ Make sure you have [Docker](https://www.docker.com/) and Docker Compose installe
    cd flask-cicd-pipeline
 
 2. Build and start the container in detached mode:
-    docker-compose up --build -d
+   ```bash
+   docker-compose up --build -d
+   ```
 
-3. Access the application at: http://localhost:5000
+4. Access the application at: http://localhost:5000
 
 To stop the application, run:
-    docker-compose down
+  ```bash
+  docker-compose down
+  ```
